@@ -1,0 +1,76 @@
+/* Directory: gyan-sanchar-full */
+
+// index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gyan Sanchar</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+
+// vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  base: '/',
+});
+
+// package.json
+{
+  "name": "gyan-sanchar",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^5.0.0"
+  }
+}
+
+// README.md
+# Gyan Sanchar
+
+AI-based Q&A and Knowledge Platform for Students.
+
+// src/main.jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// src/App.jsx
+function App() {
+  return (
+    <div style={{ padding: '2rem', textAlign: 'center' }}>
+      <h1>Gyan Sanchar is Born</h1>
+      <p>Ek Nayi Shuruaat, Ek Nayi Soch!</p>
+      <p>Aapka apna Gyan Platform — Student ka Pakka Saathi</p>
+    </div>
+  );
+}
+
+export default App;
+
+// public/favicon.ico
+// (Leave empty or add an icon manually later)
